@@ -371,7 +371,7 @@ h4 {
   width: 100%;
 }
 .main-prev-btn {
-  left: 0;
+  left: -80px;
 }
 .main-next-btn {
   right: 0;
@@ -836,6 +836,7 @@ h4 {
 .feedback {
   background-color: #f7e7e6;
   padding: 9rem 0;
+  padding-left: 50px;
 }
 .feedback-slider-item {
   padding-bottom: 5rem;
@@ -859,6 +860,10 @@ h4 {
   margin-right: 1.5rem;
   position: relative;
   top: 0.4rem;
+}
+.feedback-block img{
+  max-width: 360px;
+  max-height: 360px;
 }
 .feedback-heading {
   margin-top: 4rem;
@@ -1257,6 +1262,9 @@ h4 {
   border-radius: 4px;
   transform: translateX(-50%) !important;
   padding: 3rem 6rem 4rem 6rem;
+}
+.status {
+  text-align: center;
 }
 @media (max-width: 1399px) {
   .paints {
