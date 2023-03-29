@@ -1,6 +1,12 @@
 const mask = (selector) => {
     let setCursorPosition = (pos, elem) => {
         elem.focus();
+        document.querySelectorAll('[name="phone"]').forEach(input => {
+            input.addEventListener('click', () => {
+                input.setSelectionRange(3, 3);
+                input.focus();
+            });
+        });
 
         if (elem.setSelectionRange) {
             elem.setSelectionRange(pos, pos);
