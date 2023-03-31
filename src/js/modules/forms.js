@@ -3,8 +3,6 @@ const forms = () => {
     const form = document.querySelectorAll('form'),
           inputs = document.querySelectorAll('input'),
           upload = document.querySelectorAll('[name="upload"]');
-    
-    // checkNumInputs('input[name="user_phone"]');
 
     const message = {
         loading: 'Загрузка...',
@@ -28,7 +26,7 @@ const forms = () => {
             item.value = '';
         });
         upload.forEach(item => {
-            item.previousElementSibling.textContent = 'файл не выбран';
+            item.previousElementSibling.textContent = 'Выберите файл =>';
         });
     };
 
