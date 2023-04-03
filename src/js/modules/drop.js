@@ -1,3 +1,4 @@
+import { postData } from "../services/requests";
 const drop = () => {
     // события drag & drop:
     // drag *
@@ -58,6 +59,16 @@ const drop = () => {
             arr[0].length > 5 ? dots = '...': dots = '.';
             const name = arr[0].substring(0, 8) + dots + arr[1];
             input.previousElementSibling.textContent = name;
+
+            if (input.closest('.main')) {
+ 
+                const formData = new FormData();
+                formData.append('file', input.files[0]);
+    
+                postData('assets/server.php', formData)
+                    .then(res => console.log(res))
+                    .catch(() => console.log('Ошибка'));
+            }
         });
     });
 };
